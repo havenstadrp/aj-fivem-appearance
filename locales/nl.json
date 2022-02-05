@@ -101,7 +101,7 @@
   },
   "components": {
     "title": "Kleren",
-    "drawable": "Tekenbaar",
+    "drawable": "Nummer",
     "texture": "Textuur",
     "mask": "Masker",
     "upperBody": "Handen",
@@ -116,7 +116,7 @@
   },
   "props": {
     "title": "Rekwisieten",
-    "drawable": "Tekenbaar",
+    "drawable": "Nummer",
     "texture": "Textuur",
     "hats": "Hoeden en helmen",
     "glasses": "Brillen",
