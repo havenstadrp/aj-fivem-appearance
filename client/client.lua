@@ -45,9 +45,9 @@ RegisterNetEvent('qb-clothes:client:CreateFirstCharacter', function()  -- Event 
 		exports['fivem-appearance']:startPlayerCustomization(function(appearance)
 			if (appearance) then
 				TriggerServerEvent('fivem-appearance:save', appearance)
-				print('Player Clothing Saved')
+				print('Spelerskleding opgeslagen')
 			else
-				print('Canceled')
+				print('Geannuleerd')
 			end
 		end, config)
 	end)
@@ -60,19 +60,19 @@ end)
 RegisterNetEvent('fivem-appearance:clothingShop', function()
 	exports['qb-menu']:openMenu({
         {
-            header = "👚 | Clothing Store Options",
+            header = "👚 | Kledingwinkel opties",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = "Buy Clothing - $"..Config.Money,
-			txt = "Pick from a wide range of items to wear",
+            header = "Kleding kopen - €"..Config.Money,
+			txt = "Kies uit een breed scala aan items om te dragen",
             params = {
                 event = "fivem-appearance:clothingMenu",
             }
         },
 		{
-            header = "Change Outfit",
-			txt = "Pick from any of your currently saved outfits",
+            header = "Verander outfit",
+			txt = "Kies uit een van je momenteel opgeslagen outfits",
             params = {
                 event = "fivem-appearance:pickNewOutfit",
                 args = {
@@ -82,15 +82,15 @@ RegisterNetEvent('fivem-appearance:clothingShop', function()
             }
         },
 		{
-            header = "Save New Outfit",
-			txt = "Save a new outfit you can use later on",
+            header = "Bewaar nieuwe outfit",
+			txt = "Bewaar een nieuwe outfit die je later kunt gebruiken",
             params = {
                 event = "fivem-appearance:saveOutfit",
             }
         },
 		{
-            header = "Delete Outfit",
-			txt = "Yeah... We didnt like that one either",
+            header = "Outfit verwijderen",
+			txt = "Ja... Die vonden wij ook niet leukr",
             params = {
                 event = "fivem-appearance:deleteOutfitMenu",
                 args = {
@@ -109,7 +109,7 @@ RegisterNetEvent('fivem-appearance:pickNewOutfit', function(data)
 	Wait(150)
 	local outfitMenu = {
         {
-            header = '< Go Back',
+            header = '< Ga terug',
             params = {
                 event = 'fivem-appearance:clothingShop'
             }
@@ -169,11 +169,11 @@ end)
 
 RegisterNetEvent('fivem-appearance:saveOutfit', function()
 	local keyboard = exports['qb-input']:ShowInput({
-        header = "Name your outfit",
-        submitText = "Create Outfit",
+        header = "Geef je outfit een naam",
+        submitText = "Outfit maken",
         inputs = {
             {
-                text = "Outfit Name",
+                text = "Outfit Naam",
                 name = "input",
                 type = "text",
                 isRequired = true
@@ -199,7 +199,7 @@ RegisterNetEvent('fivem-appearance:deleteOutfitMenu', function(data)
 	Wait(150)
 	local DeleteMenu = {
         {
-            header = '< Go Back',
+            header = '< Ga Terug',
             params = {
                 event = 'fivem-appearance:clothingShop'
             }
@@ -207,8 +207,8 @@ RegisterNetEvent('fivem-appearance:deleteOutfitMenu', function(data)
     }
     for i=1, #allMyOutfits, 1 do
         DeleteMenu[#DeleteMenu + 1] = {
-            header = 'Delete "'..allMyOutfits[i].name..'"',
-			txt = 'You will never be able to get this back!',
+            header = 'Verwijder "'..allMyOutfits[i].name..'"',
+			txt = 'Dit krijg je nooit meer terug!',
             params = {
 				event = 'fivem-appearance:deleteOutfit',
 				args = allMyOutfits[i].id
@@ -244,11 +244,11 @@ RegisterNetEvent('fivem-appearance:clothingMenu', function()
 		exports['fivem-appearance']:startPlayerCustomization(function(appearance)
 			if appearance then
 				TriggerServerEvent('fivem-appearance:save', appearance)
-				print('Player Clothing Saved')
+				print('Spelerskleding opgeslagen')
 				Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 				TriggerServerEvent('Select:Tattoos')
 			else
-				print('Canceled')
+				print('Geannuleerd')
 				Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 				TriggerServerEvent('Select:Tattoos')
 			end
@@ -269,11 +269,11 @@ RegisterNetEvent('fivem-appearance:barberMenu', function()
 	exports['fivem-appearance']:startPlayerCustomization(function (appearance)
 		if appearance then
 			TriggerServerEvent('fivem-appearance:save', appearance)
-			print('Player Clothing Saved')
+			print('Spelerskleding opgeslagen')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		else
-			print('Canceled')
+			print('Geannuleerd')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		end
@@ -296,11 +296,11 @@ RegisterNetEvent('qb-clothing:client:openMenu', function()  -- Admin Menu clothi
 	exports['fivem-appearance']:startPlayerCustomization(function(appearance)
 		if appearance then
 			TriggerServerEvent('fivem-appearance:save', appearance)
-			print('Player Clothing Saved')
+			print('Spelerskleding opgeslagen')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		else
-			print('Canceled')
+			print('Geannuleerd')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		end
@@ -310,12 +310,12 @@ end)
 RegisterNetEvent('qb-clothing:client:openOutfitMenu', function()  -- Name is so that you dont have to replace the event, Used in Appartments, Bossmenu, etc...
 	exports['qb-menu']:openMenu({
         {
-            header = "👔 | Outfit Options",
+            header = "👔 | Outfit Opties",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
 		{
-            header = "Change Outfit",
-			txt = "Pick from any of your currently saved outfits",
+            header = "Verander outfit",
+			txt = "Kies uit een van je momenteel opgeslagen outfits",
             params = {
                 event = "fivem-appearance:pickNewOutfitApp",
                 args = {
@@ -325,15 +325,15 @@ RegisterNetEvent('qb-clothing:client:openOutfitMenu', function()  -- Name is so 
             }
         },
 		{
-            header = "Save New Outfit",
-			txt = "Save a new outfit you can use later on",
+            header = "Bewaar nieuwe outfit",
+			txt = "Bewaar een nieuwe outfit die je later kunt gebruiken",
             params = {
                 event = "fivem-appearance:saveOutfit",
             }
         },
 		{
-            header = "Delete Outfit",
-			txt = "Yeah... We didnt like that one either",
+            header = "Outfit verwijderen",
+			txt = "Ja... Die vonden wij ook niet leuk",
             params = {
                 event = "fivem-appearance:deleteOutfitMenu",
                 args = {
@@ -353,7 +353,7 @@ RegisterNetEvent('fivem-appearance:pickNewOutfitApp', function(data)
 	Wait(150)
 	local outfitMenu = {
         {
-            header = '< Go Back',
+            header = '< Ga Terug',
             params = {
                 event = 'qb-clothing:client:openOutfitMenu'
             }
@@ -383,7 +383,7 @@ RegisterNetEvent('fivem-appearance:deleteOutfitMenuApp', function(data)
 	Wait(150)
 	local DeleteMenu = {
         {
-            header = '< Go Back',
+            header = '< Ga Terug',
             params = {
                 event = 'fivem-appearance:clothingShop'
             }
@@ -391,8 +391,8 @@ RegisterNetEvent('fivem-appearance:deleteOutfitMenuApp', function(data)
     }
     for i=1, #allMyOutfits, 1 do
         DeleteMenu[#DeleteMenu + 1] = {
-            header = 'Delete "'..allMyOutfits[i].name..'"',
-			txt = 'You will never be able to get this back!',
+            header = 'Verwijder "'..allMyOutfits[i].name..'"',
+			txt = 'Dit krijg je nooit meer terug!',
             params = {
 				event = 'fivem-appearance:deleteOutfit',
 				args = allMyOutfits[i].id
@@ -437,7 +437,7 @@ CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName('STRING')
-		AddTextComponentSubstringPlayerName('Barber Shop')
+		AddTextComponentSubstringPlayerName('Kapperszaak')
 		EndTextCommandSetBlipName(blip)
 	end
 	for k,v in ipairs(Config.ClothingShops) do
@@ -451,7 +451,7 @@ CreateThread(function()
 			SetBlipAsShortRange(blip, true)
 
 			BeginTextCommandSetBlipName('STRING')
-			AddTextComponentSubstringPlayerName('Clothing Store')
+			AddTextComponentSubstringPlayerName('Kledingwinkel')
 			EndTextCommandSetBlipName(blip)
 		end
 	end
@@ -487,13 +487,13 @@ CreateThread(function()
 		if (isInClothingShop and not hasAlreadyEnteredMarker) or (isInClothingShop and LastZone ~= currentZone) then
 			hasAlreadyEnteredMarker, LastZone = true, currentZone
 			CurrentAction     = 'clothingMenu'
-			exports['qb-drawtext']:DrawText('[E] Clothing Menu','left')
+			exports['qb-drawtext']:DrawText('[E] Kledingmenu','left')
 		end
 
 		if (isInBarberShop and not hasAlreadyEnteredMarker) or (isInBarberShop and LastZone ~= currentZone) then
 			hasAlreadyEnteredMarker, LastZone = true, currentZone
 			CurrentAction     = 'barberMenu'
-			exports['qb-drawtext']:DrawText('[E] Barber Menu','left')
+			exports['qb-drawtext']:DrawText('[E] Kappersmenu','left')
 		end
 
 		if not isInClothingShop and not isInBarberShop and hasAlreadyEnteredMarker then
@@ -541,11 +541,11 @@ RegisterCommand('clothingmenu', function()
 	exports['fivem-appearance']:startPlayerCustomization(function (appearance)
 		if (appearance) then
 			TriggerServerEvent('fivem-appearance:save', appearance)
-			print('Player Clothing Saved')
+			print('Spelerskleding opgeslagen')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		else
-			print('Canceled')
+			print('Geannuleerd')
 			Wait(1000) -- Wait is needed to clothing menu dosent overwrite the tattoos
 			TriggerServerEvent('Select:Tattoos')
 		end
