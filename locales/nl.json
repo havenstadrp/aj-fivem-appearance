@@ -1,0 +1,127 @@
+{
+  "modal": {
+    "save": {
+      "title": "Aanpassing opslaan",
+      "description": "Je blijft lelijk"
+    },
+    "exit": {
+      "title": "Aanpassing afsluiten",
+      "description": "Er worden geen wijzigingen opgeslagen"
+    },
+    "accept": "Ja",
+    "decline": "Nee"
+  },
+  "ped": {
+    "title": "Ped",
+    "model": "Model"
+  },
+  "headBlend": {
+    "title": "Erfenis",
+    "shape": {
+      "title": "Gezicht",
+      "firstOption": "Vader",
+      "secondOption": "Moeder",
+      "mix": "Mix"
+    },
+    "skin": {
+      "title": "Huid",
+      "firstOption": "Vader",
+      "secondOption": "Moeder",
+      "mix": "Mix"
+    }
+  },
+  "faceFeatures": {
+    "title": "Gezichtskenmerken",
+    "nose": {
+      "title": "Nuis",
+      "width": "Breedte",
+      "height": "Hoogte",
+      "size": "Maat",
+      "boneHeight": "Bot hoogte",
+      "boneTwist": "Bot twist",
+      "peakHeight": "Piekhoogte"
+    },
+    "eyebrows": {
+      "title": "Wenkbrauwen",
+      "height": "Hoogte",
+      "depth": "Diepte"
+    },
+    "cheeks": {
+      "title": "Cheeks",
+      "boneHeight": "Bot hoogte",
+      "boneWidth": "Bot breedte",
+      "width": "Breedte"
+    },
+    "eyesAndMouth": {
+      "title": "Ogen en mond",
+      "eyesOpening": "Opening ogen",
+      "lipsThickness": "Lip dikte"
+    },
+    "jaw": {
+      "title": "Kaak",
+      "width": "Breedte",
+      "size": "Maat"
+    },
+    "chin": {
+      "title": "Kin",
+      "lowering": "Verlagen",
+      "length": "Lengte",
+      "size": "Maat",
+      "hole": "Gat Grootte"
+    },
+    "neck": {
+      "title": "Nek",
+      "thickness": "Dikte"
+    }
+  },
+  "headOverlays": {
+    "title": "Uiterlijk",
+    "hair": {
+      "title": "Haar",
+      "style": "Stijl",
+      "color": "Kleur",
+      "highlight": "Highlights"
+    },
+    "opacity": "Dekking",
+    "style": "Stijl",
+    "color": "Kleur",
+    "blemishes": "Imperfecties",
+    "beard": "Baard",
+    "eyebrows": "Wenkbrauwen",
+    "ageing": "Veroudering",
+    "makeUp": "Make up",
+    "blush": "Blozen",
+    "complexion": "Teint",
+    "sunDamage": "Zonschade",
+    "lipstick": "Lippenstift",
+    "moleAndFreckles": "Mol en sproeten",
+    "chestHair": "Borsthaar",
+    "bodyBlemishes": "Lichaamsvlekken",
+    "eyeColor": "Oogkleur"
+  },
+  "components": {
+    "title": "Kleren",
+    "drawable": "Tekenbaar",
+    "texture": "Textuur",
+    "mask": "Masker",
+    "upperBody": "Handen",
+    "lowerBody": "Benen",
+    "bags": "Tassen en parachute",
+    "shoes": "Schoenen",
+    "scarfAndChains": "Sjaals en kettingen",
+    "shirt": "Shirt",
+    "bodyArmor": "Kogelvrije vesten",
+    "decals": "Stickers",
+    "jackets": "Jassen"
+  },
+  "props": {
+    "title": "Rekwisieten",
+    "drawable": "Tekenbaar",
+    "texture": "Textuur",
+    "hats": "Hoeden en helmen",
+    "glasses": "Brillen",
+    "ear": "Oor",
+    "watches": "Horloges",
+    "bracelets": "Armbanden"
+  }
+}
